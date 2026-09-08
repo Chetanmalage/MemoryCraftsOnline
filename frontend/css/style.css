@@ -1,25 +1,3 @@
-/* ==============================
-   Global Styles
-================================= */
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-
-/* ==============================
-   Navbar
-================================= */
-
-.navbar {
-    padding: 15px 0;
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-}
-
 .nav-link {
-    margin-left: 10px;
+    white-space: nowrap;
 }

@@ -16,102 +16,157 @@
 
 <body>
 
-    <!-- <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a href="#" class="navbar-brand fw-bold">MemoryCraftsOnline</a>
 
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- NAVBAR -->
+    <nav class="navbar bg-white border-bottom">
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto gap-2">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-
-                <form>
-                    <input type="search">
-                </form>
-            </div>
-
-        </div>
-    </nav> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!-- HEADER -->
         <div class="container">
 
-            <!-- Brand --> 
-            <a class="navbar-brand fw-bold" href="#">
-                MemoryCraftsOnline
-            </a>
+            <div class="d-flex align-items-center w-100 gap-3">
 
-            <!-- Mobile Menu Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navigation Links -->
-            <div class="collapse navbar-collapse" id="mainNavbar">
-
-                <!-- Navigation Links -->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Categories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-
-                <!-- Search -->
-                <form class="d-flex ms-lg-3 my-2 my-lg-0" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search products"
-                        aria-label="Search products">
-                    <button class="btn btn-outline-dark" type="submit">
-                        Search
-                    </button>
-                </form>
-
-                <!-- Wishlist -->
-                <a href="#" class="btn btn-outline-danger ms-lg-2 my-2 my-lg-0">
-                    ❤️
+                <!-- Logo -->
+                <a href="#" class="navbar-brand fw-bold">
+                    MemoryCrafts
                 </a>
 
-                <!-- Cart -->
-                <a href="#" class="btn btn-dark ms-lg-2 my-2 my-lg-0">
-                    🛒 Cart
+                <!-- SEARCH -->
+
+                <div class="input-group flex-grow-1">
+
+                    <input type="search" class="form-control" placeholder="Search products..."
+                        aria-label="Search products">
+                    <button class="btn btn-primary px-3" type="submit">
+                        🔍
+                    </button>
+
+                </div>
+
+<!--               
+                <div class="input-group flex-grow-1">
+
+                    <input type="search" class="form-control" placeholder="Search products..."
+                        aria-label="Search products">
+
+                    <button class="btn btn-primary" type="submit">
+                        🔍
+                    </button>
+
+                </div> -->
+
+
+                <!-- DESKTOP NAVIGATION -->
+                <div class="d-none d-lg-flex align-items-center gap-3">
+
+                    <a href="#" class="nav-link">
+                        Shop
+                    </a>
+                    <a href="#" class="nav-link">
+                        New Arrivals
+                    </a>
+                    <a href="#" class="nav-link">
+                        Offers
+                    </a>
+                    <a href="#" class="nav-link">
+                        ♡ Wishlist
+                    </a>
+                    <a href="#" class="nav-link">
+                        🛒 Cart
+                    </a>
+
+                </div>
+
+                <!-- ACCOUNT -->
+                <div class="dropdown">
+
+                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        ☰
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                My Account
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                My Orders
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Addresses
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Help & Support
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item text-danger" href="#">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- MOBILE BOTTOM NAV -->
+        <div class="d-lg-none fixed-bottom bg-primary border-top">
+            <div class="d-flex justify-content-around py-3">
+
+                <a href="#" class="nav-link text-center">
+                    <!-- 🏠 -->
+                    <small class="d-block">Home</small>
+                </a>
+
+                <a href="#" class="nav-link text-center">
+                    <!-- 🛍️ -->
+                    <small class="d-block">Shop</small>
+                </a>
+
+                <a href="#" class="nav-link text-center">
+                    <!-- 👤 -->
+                    <small class="d-block">Account</small>
+                </a>
+
+                <a href="#" class="nav-link text-center">
+                    <!-- 🛒 -->
+                    <small class="d-block">Cart</small>
+                </a>
+
+                <a href="#" class="nav-link text-center">
+                    <!-- 📦 -->
+                    <small class="d-block">Orders</small>
                 </a>
             </div>
         </div>
     </nav>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -179,6 +234,7 @@
             </div>
         </div>
     </div>
+
 
 
 
