@@ -1,3 +1,40 @@
 .nav-link {
+    margin-left: 10px;
     white-space: nowrap;
+    text-decoration: none;
+    padding: 6px 0;
+}
+
+.nav-link:hover {
+    color: #0d6efd;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.input-group .form-control,
+.input-group .btn {
+    height: 42px;
+}
+
+.fixed-bottom i {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1.2rem;
+}
+
+.fixed-bottom .nav-link.active {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.fixed-bottom .nav-link.active i {
+    font-size: 1.3rem;
+}
+
+.bottom-nav-text {
+    font-size: 0.75rem;
 }
