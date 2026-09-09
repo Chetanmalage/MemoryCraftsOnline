@@ -1,0 +1,32 @@
+/* ================================
+   RESPONSIVE / MOBILE
+================================ */
+
+/* Space for mobile bottom navigation */
+@media (max-width: 991.98px) {
+    body {
+        padding-bottom: 60px;
+    }
+}
+
+/* Mobile bottom navigation icons */
+.fixed-bottom i {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1.2rem;
+}
+
+/* Active mobile navigation item */
+.fixed-bottom .nav-link.active {
+    color: var(--primary-pink);
+    font-weight: 600;
+}
+
+.fixed-bottom .nav-link.active i {
+    font-size: 1.3rem;
+}
+
+/* Mobile navigation text */
+.bottom-nav-text {
+    font-size: 0.75rem;
+}

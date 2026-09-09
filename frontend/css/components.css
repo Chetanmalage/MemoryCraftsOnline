@@ -1,0 +1,248 @@
+/* ================================
+   NAVBAR
+================================ */
+
+.nav-link {
+    margin-left: 10px;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 6px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--primary-pink) !important;
+}
+
+/* Navbar link hover */
+.navbar .nav-link:hover {
+    color: var(--primary-pink) !important;
+}
+
+/* Wishlist and Cart icons */
+.navbar .bi-heart,
+.navbar .bi-cart {
+    color: var(--primary-pink);
+}
+
+/* Search box */
+.input-group .form-control,
+.input-group .btn {
+    height: 42px;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    background-color: var(--light-pink) !important;
+}
+
+.hero h1 {
+    color: var(--dark-text);
+}
+
+.hero .lead {
+    color: #666666;
+}
+
+.hero img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+
+/* ================================
+   CATEGORIES
+================================ */
+
+.category-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid var(--soft-pink);
+}
+
+.category-item {
+    transition: transform 0.2s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-10px);
+}
+
+/* ================================
+   PRODUCT CARDS
+================================ */
+
+.product-card {
+    border: 1px solid #f5d6df;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Product image */
+.product-card .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+/* Product image hover */
+.product-card .product-image {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.03);
+}
+
+/* Product wishlist button */
+.product-card .btn-light {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f5d6df;
+    background-color: white;
+}
+
+.product-card .btn-light:hover {
+    background-color: var(--soft-pink);
+}
+
+/* ================================
+   PRODUCT PRICING
+================================ */
+
+.product-pricing {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
+
+.original-price {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 0.85rem;
+}
+
+.product-price {
+    color: var(--primary-pink);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+/* ================================
+   DISCOUNT BADGE
+================================ */
+
+.product-card .discount-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--primary-pink);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 9px;
+    border-radius: 5px;
+}
+
+/* ================================
+   PRODUCT CARD CONTENT
+================================ */
+
+.product-card .card-body {
+    padding: 16px;
+}
+
+.product-card .card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+.product-card .card-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   PRODUCT BUTTONS
+================================ */
+
+.product-card .btn-primary {
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.product-card .btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+.product-card .btn-outline-primary {
+    font-weight: 500;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.product-card .btn-outline-primary:hover {
+    transform: translateY(-1px);
+}
+
+/* ================================
+   WHY CHOOSE US
+================================ */
+
+.why-choose-icon {
+    width: 55px;
+    height: 55px;
+    background-color: var(--soft-pink);
+    color: var(--primary-pink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 1.4rem;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer-link {
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: var(--primary-pink) !important;
+}
+
+.footer-social a {
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.footer-social a:hover {
+    color: var(--primary-pink) !important;
+}

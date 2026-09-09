@@ -1,100 +1,7 @@
-.nav-link {
-    margin-left: 10px;
-    white-space: nowrap;
-    text-decoration: none;
-    padding: 6px 0;
-}
-
-.nav-link:hover {
-    color: #0d6efd;
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-.input-group .form-control,
-.input-group .btn {
-    height: 42px;
-}
-
-.fixed-bottom i {
-    display: block;
-    margin-bottom: 2px;
-    font-size: 1.2rem;
-}
-
-.fixed-bottom .nav-link.active {
-    color: #0d6efd;
-    font-weight: 600;
-}
-
-.fixed-bottom .nav-link.active i {
-    font-size: 1.3rem;
-}
-
-.bottom-nav-text {
-    font-size: 0.75rem;
-}
-
-/* Space for mobile bottom navigation */
-@media (max-width: 991.98px) {
-    body {
-        padding-bottom: 60px;
-    }
-}
-
-
-/* Category image */
-.category-image img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-.category-item {
-    transition: transform 0.2s ease;
-}
-
-.category-item:hover {
-    transform: translateY(-10px);
-}
-
-.product-image {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-}
-
-
-.footer-link:hover {
-    color: #0d6efd !important;
-}
-
-.footer-social a {
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-.footer-social a:hover {
-    color: #0d6efd !important;
-}
-
-
-
-
-
-
-
-
 /* ================================
-   LIGHT PINK THEME
+   GLOBAL THEME
 ================================ */
 
-/* Main primary color */
 :root {
     --primary-pink: #e88ca8;
     --light-pink: #fff5f8;
@@ -108,7 +15,11 @@ body {
     color: var(--dark-text);
 }
 
-/* Primary buttons */
+
+/* ================================
+   GLOBAL BUTTONS
+================================ */
+
 .btn-primary {
     background-color: var(--primary-pink);
     border-color: var(--primary-pink);
@@ -119,7 +30,6 @@ body {
     border-color: #d97896;
 }
 
-/* Outline primary buttons */
 .btn-outline-primary {
     color: var(--primary-pink);
     border-color: var(--primary-pink);
@@ -131,226 +41,11 @@ body {
     color: white;
 }
 
-/* ================================
-   NAVBAR PINK ACCENTS
-================================ */
-
-/* Navbar links */
-.navbar .nav-link:hover {
-    color: var(--primary-pink) !important;
-}
-
-/* Wishlist and cart icons */
-.navbar .bi-heart,
-.navbar .bi-cart {
-    color: var(--primary-pink);
-}
-
-/* Logo */
-.navbar-brand {
-    color: var(--primary-pink) !important;
-}
-
-/* ================================
-   HERO - LIGHT PINK BACKGROUND
-================================ */
-
-.hero {
-    background-color: var(--light-pink) !important;
-}
-
-/* ================================
-   CATEGORY IMAGE
-================================ */
-
-.category-image img {
-    border: 3px solid var(--soft-pink);
-}
-
-/* ================================
-   PRODUCT CARDS
-================================ */
-
-.product-card {
-    border: 1px solid #f5d6df;
-    transition: 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
-}
-
-/* Product image */
-.product-card .card-img-top {
-    height: 220px;
-    object-fit: cover;
-    padding: 10px;
-}
-
-/* ================================
-   PRODUCT WISHLIST BUTTON
-================================ */
-
-.product-card .btn-light {
-    width: 38px;
-    height: 38px;
-    padding: 0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #f5d6df;
-    background-color: white;
-}
-
-.product-card .btn-light:hover {
-    background-color: var(--soft-pink);
-}
-
-/* ================================
-   PRODUCT PRICE
-================================ */
-
-.product-card .product-price {
-    color: var(--primary-pink);
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-/* ================================
-   PRODUCT TITLE & DESCRIPTION
-================================ */
-
-.product-card .card-title {
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-bottom: 6px;
-}
-
-.product-card .card-text {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-/* ================================
-   PRODUCT IMAGE HOVER
-================================ */
-
-.product-card .product-image {
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover .product-image {
-    transform: scale(1.03);
-}
-
-/* ================================
-   ADD TO CART BUTTON
-================================ */
-
-.product-card .btn-primary {
-    font-weight: 600;
-    border-radius: 8px;
-    transition: 0.2s ease;
-}
-
-.product-card .btn-primary:hover {
-    transform: translateY(-1px);
-}
-
-/* ================================
-   VIEW DETAILS BUTTON
-================================ */
-
-.product-card .btn-outline-primary {
-    font-weight: 500;
-    border-radius: 8px;
-    transition: 0.2s ease;
-}
-
-.product-card .btn-outline-primary:hover {
-    transform: translateY(-1px);
-}
-
-/* ================================
-   DISCOUNT BADGE
-================================ */
-
-.product-card .discount-badge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background-color: var(--primary-pink);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 5px 9px;
-    border-radius: 5px;
-}
 
 /* ================================
    SECTION TITLES
 ================================ */
 
 .section-title {
-    color: #333333;
-}
-
-
-/* ================================
-   PRODUCT PRICING
-================================ */
-
-.product-pricing {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 5px;
-}
-
-.original-price {
-    color: #888;
-    text-decoration: line-through;
-    font-size: 0.85rem;
-}
-
-.product-price {
-    color: var(--primary-pink);
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-/* ================================
-   PRODUCT CARD SPACING
-================================ */
-
-.product-card .card-body {
-    padding: 16px;
-}
-
-.product-card .card-title {
-    margin-top: 2px;
-}
-
-.product-card .product-pricing {
-    margin-bottom: 4px;
-}
-
-/* ================================
-   WHY CHOOSE US
-================================ */
-
-.why-choose-icon {
-    width: 55px;
-    height: 55px;
-    background-color: var(--soft-pink);
-    color: var(--primary-pink);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 12px;
-    font-size: 1.4rem;
+    color: var(--dark-text);
 }
