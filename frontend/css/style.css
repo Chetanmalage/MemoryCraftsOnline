@@ -1,20 +1,53 @@
 /* ================================
-   GLOBAL THEME
+   THEME VARIABLES
 ================================ */
 
 :root {
+    /* Pink palette */
     --primary-pink: #e88ca8;
-    --light-pink: #fff5f8;
+    --primary-pink-dark: #d97896;
+    --primary-pink-light: #f5b8cb;
     --soft-pink: #fde7ee;
-    --dark-text: #333333;
+    --light-pink: #fff5f8;
+    --page-bg: #fffafb;
+
+    /* Neutrals */
+    --dark-text: #3a2a30;
+    --muted-text: #8a7a80;
+    --border-pink: #f5d6df;
+
+    /* Layout */
+    --bottom-nav-height: 62px;
 }
 
-/* Page background */
+/* ================================
+   GLOBAL
+================================ */
+
 body {
-    background-color: #fffafb;
+    background-color: var(--page-bg);
     color: var(--dark-text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* Skip link — visible only on keyboard focus */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 2000;
+    background: var(--primary-pink);
+    color: #fff;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 0 0 6px 0;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
 
 /* ================================
    GLOBAL BUTTONS
@@ -23,11 +56,15 @@ body {
 .btn-primary {
     background-color: var(--primary-pink);
     border-color: var(--primary-pink);
+    color: #fff;
 }
 
-.btn-primary:hover {
-    background-color: #d97896;
-    border-color: #d97896;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--primary-pink-dark);
+    border-color: var(--primary-pink-dark);
+    color: #fff;
 }
 
 .btn-outline-primary {
@@ -35,12 +72,21 @@ body {
     border-color: var(--primary-pink);
 }
 
-.btn-outline-primary:hover {
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
     background-color: var(--primary-pink);
     border-color: var(--primary-pink);
-    color: white;
+    color: #fff;
 }
 
+.btn:focus-visible,
+.form-control:focus,
+a:focus-visible {
+    outline: 2px solid var(--primary-pink);
+    outline-offset: 2px;
+    box-shadow: none;
+}
 
 /* ================================
    SECTION TITLES
@@ -48,4 +94,233 @@ body {
 
 .section-title {
     color: var(--dark-text);
+    letter-spacing: -0.01em;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    background-color: #fff !important;
+}
+
+/* Main navbar row */
+.navbar-main {
+    min-width: 0;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.navbar-brand {
+    font-size: 1.45rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--primary-pink) !important;
+    letter-spacing: -0.02em;
+    flex: 0 0 auto;
+}
+
+
+/* ================================
+   DESKTOP SEARCH
+================================ */
+
+.desktop-search {
+    flex: 1 1 auto;
+    min-width: 180px;
+    margin-left: 30px;
+}
+
+
+/* ================================
+   DESKTOP NAVIGATION
+================================ */
+
+.desktop-navigation {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: 24px;
+}
+
+.navbar .nav-link {
+    margin-left: 0;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 6px 0;
+    color: var(--dark-text);
+    transition: color 0.15s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-pink) !important;
+}
+
+
+/* Wishlist and cart icons */
+
+.navbar .nav-link .bi-heart,
+.navbar .nav-link .bi-cart {
+    color: var(--primary-pink);
+}
+
+
+/* ================================
+   ACCOUNT
+================================ */
+
+.account-wrapper {
+    flex: 0 0 auto;
+    margin-left: 18px;
+}
+
+.account-btn {
+    color: var(--primary-pink);
+    font-size: 1.25rem;
+    padding: 4px 8px;
+    border: none;
+    white-space: nowrap;
+}
+
+.account-btn:hover {
+    color: var(--primary-pink-dark);
+}
+
+
+/* ================================
+   ACCOUNT DROPDOWN
+================================ */
+
+.dropdown-menu {
+    border-color: var(--border-pink);
+    box-shadow: 0 8px 24px rgba(232, 140, 168, 0.15);
+}
+
+.dropdown-item:active {
+    background-color: var(--soft-pink);
+    color: var(--dark-text);
+}
+
+
+/* ================================
+   SEARCH INPUTS
+================================ */
+
+.input-group .form-control,
+.input-group .btn {
+    height: 42px;
+}
+
+.input-group .form-control {
+    border-color: var(--border-pink);
+}
+
+.input-group .form-control:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 3px var(--soft-pink);
+}
+
+
+/* ================================
+   MOBILE SEARCH
+================================ */
+
+.mobile-search {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    min-width: 0;
+}
+
+.mobile-search-btn {
+    color: var(--primary-pink);
+    font-size: 1.25rem;
+    padding: 4px 8px;
+    border: none;
+    flex: 0 0 auto;
+}
+
+.mobile-search-btn:hover {
+    color: var(--primary-pink-dark);
+}
+
+
+/* Search input is hidden initially */
+
+.mobile-search-input {
+    display: none;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+
+/* When search is active */
+
+.mobile-search.active {
+    flex: 1 1 auto;
+}
+
+.mobile-search.active .mobile-search-input {
+    display: block;
+}
+
+
+/* Search input itself */
+
+.mobile-search-input .form-control {
+    width: 100%;
+    height: 40px;
+    border-color: var(--border-pink);
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero-section {
+    background-color: var(--light-pink);
+}
+
+.hero-title {
+    font-size: clamp(1.35rem, 4.5vw, 2.5rem);
+    line-height: 1.25;
+    color: var(--dark-text);
+    padding: 0 1rem;
+}
+
+.hero-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Carousel controls — larger tap target on touch devices */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 12%;
+    min-width: 44px;
+    opacity: 0.85;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-pink);
+    border: none;
+    opacity: 0.4;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
 }

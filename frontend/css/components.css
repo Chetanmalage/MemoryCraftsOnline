@@ -1,149 +1,113 @@
 /* ================================
-   NAVBAR
-================================ */
-
-.nav-link {
-    margin-left: 10px;
-    white-space: nowrap;
-    text-decoration: none;
-    padding: 6px 0;
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: 700;
-    white-space: nowrap;
-    color: var(--primary-pink) !important;
-}
-
-/* Navbar link hover */
-.navbar .nav-link:hover {
-    color: var(--primary-pink) !important;
-}
-
-/* Wishlist and Cart icons */
-.navbar .bi-heart,
-.navbar .bi-cart {
-    color: var(--primary-pink);
-}
-
-/* Search box */
-.input-group .form-control,
-.input-group .btn {
-    height: 42px;
-}
-
-
-/* ================================
-   HERO SECTION
-================================ */
-
-.hero {
-    background-color: var(--light-pink) !important;
-}
-
-.hero h1 {
-    color: var(--dark-text);
-}
-
-.hero .lead {
-    color: #666666;
-}
-
-.hero img {
-    max-height: 400px;
-    object-fit: cover;
-}
-
-
-/* ================================
    CATEGORIES
 ================================ */
 
 .category-image img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     object-fit: cover;
     border: 3px solid var(--soft-pink);
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    transition: border-color 0.2s ease;
 }
 
 .category-item {
+    display: block;
     transition: transform 0.2s ease;
 }
 
-.category-item:hover {
-    transform: translateY(-10px);
+.category-item h6 {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: var(--dark-text);
 }
+
+
+/* ================================
+   CATEGORY SEE ALL
+================================ */
+
+.category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.category-see-all {
+    color: var(--primary-pink);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.category-see-all:hover {
+    color: var(--primary-pink-dark);
+}
+
 
 /* ================================
    PRODUCT CARDS
 ================================ */
 
 .product-card {
-    border: 1px solid #f5d6df;
-    transition: 0.3s ease;
+    border: 1px solid var(--border-pink);
+    background-color: #fff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+.product-image-link {
+    display: block;
+    overflow: hidden;
 }
 
-/* Product image */
 .product-card .card-img-top {
-    height: 220px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
     object-fit: cover;
-    padding: 10px;
-}
-
-/* Product image hover */
-.product-card .product-image {
+    padding: 0;
+    background-color: var(--light-pink);
     transition: transform 0.3s ease;
 }
 
-.product-card:hover .product-image {
-    transform: scale(1.03);
-}
 
-/* Product wishlist button */
-.product-card .btn-light {
-    width: 38px;
-    height: 38px;
+/* ================================
+   WISHLIST
+================================ */
+
+.product-card .wishlist-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
     padding: 0;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #f5d6df;
-    background-color: white;
-}
-
-.product-card .btn-light:hover {
-    background-color: var(--soft-pink);
-}
-
-/* ================================
-   PRODUCT PRICING
-================================ */
-
-.product-pricing {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 5px;
-    margin-bottom: 4px;
-}
-
-.original-price {
-    color: #888;
-    text-decoration: line-through;
-    font-size: 0.85rem;
-}
-
-.product-price {
+    border: 1px solid var(--border-pink);
+    background-color: #fff;
     color: var(--primary-pink);
-    font-size: 1.1rem;
-    font-weight: 700;
+    z-index: 2;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.product-card .wishlist-btn::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+}
+
+.product-card .wishlist-btn:hover {
+    background-color: var(--soft-pink);
+    color: var(--primary-pink-dark);
 }
 
 
@@ -153,35 +117,76 @@
 
 .product-card .discount-badge {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 8px;
+    left: 8px;
     background-color: var(--primary-pink);
-    color: white;
-    font-size: 0.75rem;
+    color: #fff;
+    font-size: 0.7rem;
     font-weight: 600;
-    padding: 5px 9px;
+    padding: 4px 8px;
     border-radius: 5px;
+    z-index: 2;
+    letter-spacing: 0.02em;
 }
 
+
 /* ================================
-   PRODUCT CARD CONTENT
+   PRODUCT BODY
 ================================ */
 
 .product-card .card-body {
-    padding: 16px;
+    padding: 12px;
 }
 
 .product-card .card-title {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    margin-top: 2px;
-    margin-bottom: 6px;
+    margin: 0 0 4px;
+    line-height: 1.3;
+}
+
+.product-card .card-title a {
+    color: var(--dark-text);
+    text-decoration: none;
+}
+
+.product-card .card-title a:hover {
+    color: var(--primary-pink);
 }
 
 .product-card .card-text {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   PRODUCT PRICING
+================================ */
+
+.product-pricing {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.original-price {
+    color: #a89aa0;
+    text-decoration: line-through;
+    font-size: 0.8rem;
+}
+
+.product-price {
+    color: var(--primary-pink);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1;
 }
 
 
@@ -192,22 +197,11 @@
 .product-card .btn-primary {
     font-weight: 600;
     border-radius: 8px;
-    transition: 0.2s ease;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
 }
 
-.product-card .btn-primary:hover {
-    transform: translateY(-1px);
-}
-
-.product-card .btn-outline-primary {
-    font-weight: 500;
-    border-radius: 8px;
-    transition: 0.2s ease;
-}
-
-.product-card .btn-outline-primary:hover {
-    transform: translateY(-1px);
-}
 
 /* ================================
    WHY CHOOSE US
@@ -226,12 +220,36 @@
     font-size: 1.4rem;
 }
 
+
+/* ================================
+   FOOTER BENEFITS
+================================ */
+
+.footer-benefits {
+    background-color: var(--light-pink);
+}
+
+.footer-benefits i {
+    color: var(--primary-pink) !important;
+}
+
+
 /* ================================
    FOOTER
 ================================ */
 
+footer {
+    background-color: #fff;
+}
+
+footer h5 {
+    font-size: 1.05rem;
+    color: var(--dark-text);
+}
+
 .footer-link {
     text-decoration: none;
+    transition: color 0.15s ease;
 }
 
 .footer-link:hover {
@@ -240,9 +258,89 @@
 
 .footer-social a {
     text-decoration: none;
-    transition: 0.2s ease;
+    transition: color 0.15s ease, transform 0.2s ease;
+    display: inline-block;
 }
 
 .footer-social a:hover {
     color: var(--primary-pink) !important;
+    transform: translateY(-2px);
+}
+
+
+/* Newsletter */
+
+.footer-newsletter .form-control {
+    border-color: var(--border-pink);
+}
+
+.footer-newsletter .form-control:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 3px var(--soft-pink);
+}
+
+
+/* ================================
+   MOBILE BOTTOM NAV
+================================ */
+
+.bottom-nav {
+    background-color: #fff;
+    border-top: 1px solid var(--border-pink);
+    box-shadow: 0 -2px 12px rgba(232, 140, 168, 0.08);
+}
+
+.bottom-nav .nav-link {
+    color: var(--muted-text);
+    padding: 6px 4px;
+    margin: 0;
+    min-width: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    transition: color 0.15s ease;
+}
+
+.bottom-nav .nav-link i {
+    font-size: 1.25rem;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.bottom-nav .nav-link.active {
+    color: var(--primary-pink);
+    font-weight: 600;
+}
+
+.bottom-nav .bottom-nav-text {
+    font-size: 0.7rem;
+    line-height: 1;
+}
+
+
+/* ================================
+   HOVER EFFECTS
+   ONLY FOR POINTER DEVICES
+================================ */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(232, 140, 168, 0.18) !important;
+        border-color: var(--primary-pink-light);
+    }
+
+    .product-card:hover .card-img-top {
+        transform: scale(1.04);
+    }
+
+    .category-item:hover {
+        transform: translateY(-6px);
+    }
+
+    .category-item:hover .category-image img {
+        border-color: var(--primary-pink-light);
+    }
 }
