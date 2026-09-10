@@ -1,14 +1,7 @@
-/* ================================
-   RESPONSIVE / MOBILE ONLY
-================================ */
+/* Responsive / Mobile Only */
 
-
-/* ================================
-   MOBILE BOTTOM NAV SPACE
-================================ */
-
+/* Mobile Bottom Nav Space */
 @media (max-width: 991.98px) {
-
     body {
         padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom));
     }
@@ -18,76 +11,63 @@
     }
 }
 
-/* ================================
-   MOBILE NAVBAR
-================================ */
 
+.mobile-search-input {
+    display: flex;
+}
+
+.mobile-search-input .search-button {
+    flex: 0 0 auto;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+/* Mobile Navbar */
 @media (max-width: 991.98px) {
-
-    /* Main navbar */
     .navbar-main {
         width: 100%;
         min-width: 0;
     }
 
-
-    /* Logo stays on left */
     .navbar-brand {
         flex: 0 0 auto;
     }
 
-
-    /* Search moves to the right */
     .mobile-search {
         margin-left: auto;
         min-width: 0;
     }
 
-
-    /* Account stays at extreme right */
     .account-wrapper {
         flex: 0 0 auto;
         margin-left: 4px;
     }
 
-
-    /* Account icon */
     .account-btn {
         padding: 4px;
         font-size: 1.25rem;
     }
 
-
-    /* When search opens,
-       it gets all available space */
     .mobile-search.active {
         flex: 1 1 auto;
         min-width: 0;
     }
 
-
-    /* Search input */
     .mobile-search-input {
         min-width: 0;
     }
-
 
     .mobile-search-input .form-control {
         width: 100%;
         height: 40px;
     }
-
 }
-/* ================================
-   TABLET + MOBILE
-================================ */
 
+/* Tablet + Mobile */
 @media (max-width: 767.98px) {
 
-    /* ============================
-       HERO
-    ============================ */
-
+    /* Hero */
     .hero-section {
         padding-top: 12px !important;
         padding-bottom: 20px !important;
@@ -111,11 +91,7 @@
         margin-bottom: 6px;
     }
 
-
-    /* ============================
-       CATEGORIES
-    ============================ */
-
+    /* Categories */
     .category-section {
         padding-top: 28px !important;
         padding-bottom: 28px !important;
@@ -168,11 +144,7 @@
         margin-bottom: 0;
     }
 
-
-    /* ============================
-       PRODUCTS
-    ============================ */
-
+    /* Products */
     .product-section {
         padding-top: 28px !important;
         padding-bottom: 28px !important;
@@ -236,11 +208,7 @@
         border-radius: 7px;
     }
 
-
-    /* ============================
-       WHY CHOOSE US
-    ============================ */
-
+    /* Why Choose Us */
     .why-choose-section {
         padding-top: 30px !important;
         padding-bottom: 30px !important;
@@ -270,11 +238,7 @@
         font-size: 0.72rem;
     }
 
-
-    /* ============================
-       FOOTER BENEFITS
-    ============================ */
-
+    /* Footer Benefits */
     .footer-benefits {
         padding-top: 12px !important;
         padding-bottom: 12px !important;
@@ -289,11 +253,7 @@
         margin-bottom: 0 !important;
     }
 
-
-    /* ============================
-       FOOTER
-    ============================ */
-
+    /* Footer */
     footer {
         padding-top: 28px !important;
         padding-bottom: 24px !important;
@@ -309,26 +269,17 @@
     }
 }
 
-
-/* ================================
-   VERY SMALL PHONES
-================================ */
-
+/* Very Small Phones */
 @media (max-width: 575.98px) {
-
-    /* Hide descriptions for compact product cards */
     .product-card .card-text {
         display: none;
     }
 
-    /* Category width:
-       roughly 4 items visible */
     .category-grid>div {
         flex: 0 0 22%;
         max-width: 22%;
     }
 
-    /* Newsletter */
     .footer-newsletter {
         display: block !important;
     }
@@ -343,7 +294,6 @@
         margin-top: 0.5rem;
     }
 
-    /* Bottom nav */
     .bottom-nav .bottom-nav-text {
         font-size: 0.65rem;
     }
@@ -353,13 +303,8 @@
     }
 }
 
-
-/* ================================
-   LARGER SCREENS
-================================ */
-
+/* Larger Screens */
 @media (min-width: 768px) {
-
     .product-card .card-img-top {
         aspect-ratio: 4 / 3;
         padding: 10px;
@@ -378,11 +323,7 @@
     }
 }
 
-
-/* ================================
-   REDUCED MOTION
-================================ */
-
+/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
 
     *,

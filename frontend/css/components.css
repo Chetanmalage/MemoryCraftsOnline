@@ -1,7 +1,4 @@
-/* ================================
-   CATEGORIES
-================================ */
-
+/* Categories */
 .category-image img {
     width: 100%;
     max-width: 150px;
@@ -27,11 +24,7 @@
     color: var(--dark-text);
 }
 
-
-/* ================================
-   CATEGORY SEE ALL
-================================ */
-
+/* Category See All */
 .category-header {
     display: flex;
     align-items: center;
@@ -49,11 +42,7 @@
     color: var(--primary-pink-dark);
 }
 
-
-/* ================================
-   PRODUCT CARDS
-================================ */
-
+/* Product Cards */
 .product-card {
     border: 1px solid var(--border-pink);
     background-color: #fff;
@@ -76,11 +65,7 @@
     transition: transform 0.3s ease;
 }
 
-
-/* ================================
-   WISHLIST
-================================ */
-
+/* Wishlist */
 .product-card .wishlist-btn {
     position: absolute;
     top: 8px;
@@ -110,11 +95,7 @@
     color: var(--primary-pink-dark);
 }
 
-
-/* ================================
-   DISCOUNT BADGE
-================================ */
-
+/* Discount Badge */
 .product-card .discount-badge {
     position: absolute;
     top: 8px;
@@ -129,11 +110,7 @@
     letter-spacing: 0.02em;
 }
 
-
-/* ================================
-   PRODUCT BODY
-================================ */
-
+/* Product Body */
 .product-card .card-body {
     padding: 12px;
 }
@@ -164,11 +141,7 @@
     margin-bottom: 8px;
 }
 
-
-/* ================================
-   PRODUCT PRICING
-================================ */
-
+/* Product Pricing */
 .product-pricing {
     display: flex;
     align-items: center;
@@ -189,11 +162,7 @@
     line-height: 1;
 }
 
-
-/* ================================
-   PRODUCT BUTTONS
-================================ */
-
+/* Product Buttons */
 .product-card .btn-primary {
     font-weight: 600;
     border-radius: 8px;
@@ -202,11 +171,7 @@
     transition: background-color 0.2s ease;
 }
 
-
-/* ================================
-   WHY CHOOSE US
-================================ */
-
+/* Why Choose Us */
 .why-choose-icon {
     width: 55px;
     height: 55px;
@@ -220,11 +185,7 @@
     font-size: 1.4rem;
 }
 
-
-/* ================================
-   FOOTER BENEFITS
-================================ */
-
+/* Footer Benefits */
 .footer-benefits {
     background-color: var(--light-pink);
 }
@@ -233,11 +194,7 @@
     color: var(--primary-pink) !important;
 }
 
-
-/* ================================
-   FOOTER
-================================ */
-
+/* Footer */
 footer {
     background-color: #fff;
 }
@@ -267,9 +224,7 @@ footer h5 {
     transform: translateY(-2px);
 }
 
-
 /* Newsletter */
-
 .footer-newsletter .form-control {
     border-color: var(--border-pink);
 }
@@ -279,11 +234,7 @@ footer h5 {
     box-shadow: 0 0 0 3px var(--soft-pink);
 }
 
-
-/* ================================
-   MOBILE BOTTOM NAV
-================================ */
-
+/* Mobile Bottom Nav */
 .bottom-nav {
     background-color: #fff;
     border-top: 1px solid var(--border-pink);
@@ -318,14 +269,8 @@ footer h5 {
     line-height: 1;
 }
 
-
-/* ================================
-   HOVER EFFECTS
-   ONLY FOR POINTER DEVICES
-================================ */
-
+/* Hover Effects (Pointer Devices Only) */
 @media (hover: hover) and (pointer: fine) {
-
     .product-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 10px 24px rgba(232, 140, 168, 0.18) !important;

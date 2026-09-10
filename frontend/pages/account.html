@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account — MemoryCraftsOnline</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar bg-white border-bottom sticky-top">
+        <div class="container">
+            <div class="navbar-main d-flex align-items-center w-100">
+                <a href="../index.html" class="navbar-brand fw-bold">MemoryCrafts</a>
+                <!-- Desktop Search -->
+                <div class="input-group desktop-search d-none d-lg-flex">
+                    <input type="search" class="form-control" placeholder="Search products...">
+                    <button class="btn btn-primary px-3 search-button" type="button" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+                <!-- Mobile Search -->
+                <div class="mobile-search d-lg-none">
+                    <button class="btn mobile-search-btn" type="button" aria-label="Open search" aria-expanded="false">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <div class="mobile-search-input">
+                        <input type="search" class="form-control" placeholder="Search products...">
+                        <button class="btn btn-primary search-button" type="button" aria-label="Search">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <nav class="desktop-navigation d-none d-lg-flex align-items-center">
+                    <a href="categories.html" class="nav-link">Shop</a>
+                    <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
+                    <a href="offers.html" class="nav-link">Offers</a>
+                    <a href="wishlist.html" class="nav-link"><i class="bi bi-heart"></i><span
+                            class="ms-1">Wishlist</span></a>
+                    <a href="cart.html" class="nav-link"><i class="bi bi-cart"></i><span class="ms-1">Cart</span></a>
+                </nav>
+                <div class="dropdown account-wrapper">
+                    <button class="btn account-btn" type="button" data-bs-toggle="dropdown"><i
+                            class="bi bi-person-circle"></i>
+                        <span id="account-user-name" class="d-none d-xl-inline ms-1">Account</span>
+                    </button>
+                    <ul id="account-dropdown" class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="account.html">My Account</a></li>
+                        <li><a class="dropdown-item" href="orders.html">My Orders</a></li>
+                        <li><a class="dropdown-item" href="addresses.html">Addresses</a></li>
+                        <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                        <li><a class="dropdown-item" href="help.html">Help &amp; Support</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger logout-link" href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Main Content -->
+    <main id="account-page" class="container py-5">
+        <!-- Page Title -->
+        <div class="mb-4">
+            <h1 id="account-welcome" class="fw-bold section-title mb-1">My Account</h1>
+            <p class="text-muted mb-0">Manage your account and view your activity.</p>
+        </div>
+        <!-- Welcome Card -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-center">
+                    <!-- Profile Icon -->
+                    <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="width: 60px; height: 60px; background-color: #fff0f5;">
+                        <i class="bi bi-person fs-2" style="color: var(--primary-pink);"></i>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold mb-1">Welcome to MemoryCrafts!</h4>
+                        <p class="text-muted mb-0">
+                            Manage your orders, addresses and account settings from here.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Account Options -->
+        <div class="row g-4">
+            <!-- My Orders -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm border-0 h-100 p-4">
+                    <i class="bi bi-box-seam fs-1 mb-3" style="color: var(--primary-pink);"></i>
+                    <h5 class="fw-semibold">My Orders</h5>
+                    <p class="text-muted small">
+                        View your orders, order history and track deliveries.
+                    </p>
+                    <a href="orders.html" class="btn btn-outline-primary btn-sm mt-auto">View Orders</a>
+                </div>
+            </div>
+            <!-- Addresses -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm border-0 h-100 p-4">
+                    <i class="bi bi-geo-alt fs-1 mb-3" style="color: var(--primary-pink);"></i>
+                    <h5 class="fw-semibold">My Addresses</h5>
+                    <p class="text-muted small">
+                        Add, edit and manage your delivery addresses.
+                    </p>
+                    <a href="addresses.html" class="btn btn-outline-primary btn-sm mt-auto">Manage Addresses</a>
+                </div>
+            </div>
+            <!-- Wishlist -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm border-0 h-100 p-4">
+                    <i class="bi bi-heart fs-1 mb-3" style="color: var(--primary-pink);"></i>
+                    <h5 class="fw-semibold">My Wishlist</h5>
+                    <p class="text-muted small">
+                        View the products you saved for later.
+                    </p>
+                    <a href="wishlist.html" class="btn btn-outline-primary btn-sm mt-auto">View Wishlist</a>
+                </div>
+            </div>
+            <!-- Settings -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm border-0 h-100 p-4">
+                    <i class="bi bi-gear fs-1 mb-3" style="color: var(--primary-pink);"></i>
+                    <h5 class="fw-semibold">Account Settings</h5>
+                    <p class="text-muted small">
+                        Update your profile and account preferences.
+                    </p>
+                    <a href="settings.html" class="btn btn-outline-primary btn-sm mt-auto">Go to Settings</a>
+                </div>
+            </div>
+            <!-- Help -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm border-0 h-100 p-4">
+                    <i class="bi bi-question-circle fs-1 mb-3" style="color: var(--primary-pink);"></i>
+                    <h5 class="fw-semibold">Help & Support</h5>
+                    <p class="text-muted small">
+                        Need help? Find answers or contact our support team.
+                    </p>
+                    <a href="help.html" class="btn btn-outline-primary btn-sm mt-auto">Get Help</a>
+                </div>
+            </div>
+            <!-- Continue Shopping -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card shadow-sm border-0 h-100 p-4">
+                    <i class="bi bi-shop fs-1 mb-3" style="color: var(--primary-pink);"></i>
+                    <h5 class="fw-semibold">Continue Shopping</h5>
+                    <p class="text-muted small">
+                        Explore our personalized gifts and new arrivals.
+                    </p>
+                    <a href="categories.html" class="btn btn-outline-primary btn-sm mt-auto">Start Shopping</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <!-- Footer Benefits -->
+    <section class="border-top border-bottom py-3 footer-benefits">
+        <div class="container">
+            <div class="row justify-content-center g-3 g-md-4">
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-send fs-1 text-secondary me-2 me-md-3"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Fast Delivery</h6><small class="text-muted d-none d-md-block">In
+                                Maharashtra region</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-credit-card fs-1 text-secondary me-2 me-md-3"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Secure Payment</h6><small class="text-muted d-none d-md-block">Pay
+                                with popular and secure methods</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-headset fs-1 text-secondary me-2 me-md-3"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">24/7 Help</h6><small class="text-muted d-none d-md-block">We'll
+                                respond within 24 hours</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row g-4">
+                <!-- About Us -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5 class="fw-semibold mb-3">About Us</h5>
+                    <p class="text-muted small">Customise gifting in Solapur.</p>
+                    <a href="tel:+919405408709"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">+91 94054 08709</a>
+                    <a href="mailto:memorycrafts@memorycraftsonline.com"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link text-break">memorycrafts@memorycraftsonline.com</a>
+                    <p class="small mb-0">Solapur, Maharashtra 413006</p>
+                </div>
+                <!-- Departments -->
+                <div class="col-6 col-lg-3">
+                    <h5 class="fw-semibold mb-3">Departments</h5>
+                    <a href="about.html" class="d-block text-decoration-none text-muted small mb-2 footer-link">Who Are
+                        We</a>
+                    <a href="about.html#mission"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Our Mission</a>
+                    <a href="about.html#awards"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Awards</a>
+                    <a href="about.html#experience"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Experience</a>
+                    <a href="about.html#story" class="d-block text-decoration-none text-muted small footer-link">Success
+                        Story</a>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-6 col-lg-3">
+                    <h5 class="fw-semibold mb-3">Quick Links</h5>
+                    <a href="contact.html"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Contact Us</a>
+                    <a href="orders.html" class="d-block text-decoration-none text-muted small mb-2 footer-link">Track
+                        Order</a>
+                    <a href="shipping.html"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Shipping &amp;
+                        Delivery</a>
+                    <a href="refund.html" class="d-block text-decoration-none text-muted small mb-2 footer-link">Refund
+                        &amp; Return</a>
+                    <a href="privacy.html"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Privacy Policy</a>
+                    <a href="terms.html" class="d-block text-decoration-none text-muted small footer-link">Terms &amp;
+                        Conditions</a>
+                </div>
+                <!-- Newsletter -->
+                <div class="col-12 col-lg-3">
+                    <h5 class="fw-semibold mb-3">Let's keep in touch</h5>
+                    <p class="text-muted small">Get recommendations, tips, updates and more.</p>
+                    <form class="input-group footer-newsletter mb-3" novalidate>
+                        <input type="email" class="form-control rounded-start-pill" placeholder="info@mail.com"
+                            aria-label="Email address">
+                        <button type="submit" class="btn btn-primary rounded-end-pill px-3">Subscribe</button>
+                    </form>
+                    <div class="d-flex gap-3 fs-5 footer-social">
+                        <a href="https://www.instagram.com/the_memory_crafts/" target="_blank" rel="noopener"
+                            class="text-muted" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/the_memory_crafts/" target="_blank" rel="noopener"
+                            class="text-muted" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/919405408709" target="_blank" rel="noopener" class="text-muted"
+                            aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container py-3 border-top">
+        <p class="small text-muted text-center mb-0">MemoryCrafts ©2026 — All rights reserved.</p>
+    </div>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="d-lg-none fixed-bottom bottom-nav">
+        <div class="d-flex justify-content-around py-1">
+            <a href="../index.html" class="nav-link text-center"><i class="bi bi-house"></i><small
+                    class="d-block bottom-nav-text">Home</small></a>
+            <a href="categories.html" class="nav-link text-center"><i class="bi bi-shop"></i><small
+                    class="d-block bottom-nav-text">Shop</small></a>
+            <a href="account.html" class="nav-link text-center active"><i class="bi bi-person"></i><small
+                    class="d-block bottom-nav-text">Account</small></a>
+            <a href="cart.html" class="nav-link text-center"><i class="bi bi-cart"></i><small
+                    class="d-block bottom-nav-text">Cart</small></a>
+            <a href="orders.html" class="nav-link text-center"><i class="bi bi-box-seam"></i><small
+                    class="d-block bottom-nav-text">Orders</small></a>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -7,262 +7,135 @@
     <meta name="description"
         content="MemoryCraftsOnline — personalized gifts, photo frames, mugs, hampers and resin art. Customised gifting in Solapur, Maharashtra.">
     <meta name="theme-color" content="#fff5f8">
-
     <title>MemoryCraftsOnline — Personalized Gifts & Custom Crafts</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="frontend/css/style.css">
-    <link rel="stylesheet" href="frontend/css/components.css">
-    <link rel="stylesheet" href="frontend/css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-
-    <!-- Skip link for keyboard / screen reader users -->
+    <!-- Skip link -->
     <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- ============================
-     NAVBAR
-============================= -->
+    <!-- Navbar -->
     <header class="navbar bg-white border-bottom sticky-top">
-
         <div class="container">
-
             <div class="navbar-main d-flex align-items-center w-100">
 
-                <!-- ============================
-                 LOGO
-            ============================= -->
-                <a href="#" class="navbar-brand fw-bold">
-                    MemoryCrafts
-                </a>
+                <!-- Logo -->
+                <a href="index.html" class="navbar-brand fw-bold">MemoryCrafts</a>
 
-
-                <!-- ============================
-                 DESKTOP SEARCH
-            ============================= -->
+                <!-- Desktop Search -->
                 <div class="input-group desktop-search d-none d-lg-flex">
-
                     <input type="search" class="form-control" placeholder="Search products..."
                         aria-label="Search products">
-
-                    <button class="btn btn-primary px-3" type="button" aria-label="Search">
-
+                    <button class="btn btn-primary px-3 search-button" type="button" aria-label="Search">
                         <i class="bi bi-search"></i>
-
                     </button>
-
                 </div>
 
-
-                <!-- ============================
-                 MOBILE SEARCH
-            ============================= -->
+                <!-- Mobile Search -->
                 <div class="mobile-search d-lg-none">
-
-                    <!-- Search icon -->
                     <button class="btn mobile-search-btn" type="button" aria-label="Open search" aria-expanded="false">
-
                         <i class="bi bi-search"></i>
-
                     </button>
-
-
-                    <!-- Search input
-                     Hidden until search icon is clicked -->
                     <div class="mobile-search-input">
-
                         <input type="search" class="form-control" placeholder="Search products..."
                             aria-label="Search products">
-
+                        <button class="btn btn-primary search-button" type="button" aria-label="Search">
+                            <i class="bi bi-search"></i>
+                        </button>
                     </div>
-
                 </div>
 
-
-                <!-- ============================
-                 DESKTOP NAVIGATION
-            ============================= -->
+                <!-- Desktop Navigation -->
                 <nav class="desktop-navigation d-none d-lg-flex align-items-center" aria-label="Primary">
-
-                    <!-- Shop -->
-                    <a href="#" class="nav-link">
-                        Shop
-                    </a>
-
-                    <!-- New Arrivals -->
-                    <a href="#" class="nav-link">
-                        New Arrivals
-                    </a>
-
-                    <!-- Offers -->
-                    <a href="#" class="nav-link">
-                        Offers
-                    </a>
-
-                    <!-- Wishlist -->
-                    <a href="#" class="nav-link">
-
+                    <a href="pages/categories.html" class="nav-link">Shop</a>
+                    <a href="pages/new-arrivals.html" class="nav-link">New Arrivals</a>
+                    <a href="pages/offers.html" class="nav-link">Offers</a>
+                    <a href="pages/wishlist.html" class="nav-link">
                         <i class="bi bi-heart"></i>
-
-                        <span class="ms-1">
-                            Wishlist
-                        </span>
-
+                        <span class="ms-1">Wishlist</span>
                     </a>
-
-                    <!-- Cart -->
-                    <a href="#" class="nav-link">
-
+                    <a href="pages/cart.html" class="nav-link">
                         <i class="bi bi-cart"></i>
-
-                        <span class="ms-1">
-                            Cart
-                        </span>
-
+                        <span class="ms-1">Cart</span>
                     </a>
-
                 </nav>
 
-
-                <!-- ============================
-                 ACCOUNT
-            ============================= -->
+                <!-- Account -->
                 <div class="dropdown account-wrapper">
-
                     <button class="btn account-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"
                         aria-label="Account menu">
-
                         <i class="bi bi-person-circle"></i>
-
-                        <!-- Show text only on XL screens -->
-                        <span class="d-none d-xl-inline ms-1">
-                            Account
-                        </span>
-
+                        <span id="account-user-name" class="d-none d-xl-inline ms-1">Account</span>
                     </button>
 
-
-                    <!-- ============================
-                     ACCOUNT DROPDOWN
-                ============================= -->
-                    <ul class="dropdown-menu dropdown-menu-end">
-
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                My Account
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                My Orders
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                Addresses
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                Settings
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                Help &amp; Support
-                            </a>
-                        </li>
-
+                    <!-- Account Dropdown -->
+                    <ul id="account-dropdown" class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="pages/account.html">My Account</a></li>
+                        <li><a class="dropdown-item" href="pages/orders.html">My Orders</a></li>
+                        <li><a class="dropdown-item" href="pages/addresses.html">Addresses</a></li>
+                        <li><a class="dropdown-item" href="pages/settings.html">Settings</a></li>
+                        <li><a class="dropdown-item" href="pages/help.html">Help &amp; Support</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-
-                        <li>
-                            <a class="dropdown-item text-danger" href="#">
-                                Logout
-                            </a>
-                        </li>
-
+                        <li><a class="dropdown-item text-danger logout-link"
+                                href="/frontend/pages/login.html">Logout</a></li>
                     </ul>
-
                 </div>
-
             </div>
-
         </div>
-
     </header>
 
-
-
-
-
-
-
-
-
-
-
     <main id="main">
-
-        <!-- ============================
-     HERO BANNER
-============================= -->
+        <!-- Hero Banner -->
         <section class="hero-section pt-3 pb-4">
             <div class="container">
-                <h1 class="text-center fw-bold mb-3 hero-title">
-                    Create Memories That Last Forever
-                </h1>
+                <h1 class="text-center fw-bold mb-3 hero-title">Create Memories That Last Forever</h1>
 
                 <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
-
-                    <!-- BANNERS -->
+                    <!-- Banners -->
                     <div class="carousel-inner rounded-4 overflow-hidden">
-
                         <div class="carousel-item active">
-                            <img src="frontend/Images/hero/hero-baner.webp" class="d-block w-100 hero-banner"
+                            <img src="Images/hero/hero-baner.webp" class="d-block w-100 hero-banner"
                                 alt="Customized Mugs" fetchpriority="high" width="1600" height="900">
                         </div>
-
                         <div class="carousel-item">
-                            <img src="frontend/Images/hero/hero-Bouquet.webp" class="d-block w-100 hero-banner"
+                            <img src="Images/hero/hero-Bouquet.webp" class="d-block w-100 hero-banner"
                                 alt="Luxury Chocolate and Floral Bouquet" loading="lazy" decoding="async" width="1600"
                                 height="900">
                         </div>
-
                         <div class="carousel-item">
-                            <img src="frontend/Images/hero/hero-photo-frame.webp" class="d-block w-100 hero-banner"
+                            <img src="Images/hero/hero-photo-frame.webp" class="d-block w-100 hero-banner"
                                 alt="Premium Photo Frames" loading="lazy" decoding="async" width="1600" height="900">
                         </div>
-
                     </div>
 
-                    <!-- PREVIOUS -->
+                    <!-- Previous -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
 
-                    <!-- NEXT -->
+                    <!-- Next -->
                     <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
 
-                    <!-- INDICATORS -->
+                    <!-- Indicators -->
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
                             aria-current="true" aria-label="Slide 1"></button>
@@ -271,290 +144,198 @@
                         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
-
                 </div>
             </div>
         </section>
 
-
-        <!-- ============================
-     CATEGORIES
-============================= -->
+        <!-- Categories -->
         <section class="py-5 category-section">
-
             <div class="container">
-
-                <!-- Category heading -->
+                <!-- Category Header -->
                 <div class="category-header mb-4">
-
-                    <h2 class="section-title fw-bold">
-                        Categories
-                    </h2>
-
-                    <!-- Mobile + Desktop See All -->
-                    <a href="pages/categories.html" class="category-see-all">
-                        See All →
-                    </a>
-
+                    <h2 class="section-title fw-bold">Categories</h2>
+                    <a href="pages/categories.html" class="category-see-all">See All →</a>
                 </div>
 
-
-                <!-- Category grid / horizontal scroll on mobile -->
+                <!-- Category Grid -->
                 <div class="row g-4 category-grid">
-
                     <!-- 1. Acrylic Frame -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=acrylic-frame"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Acrylic Frame.jpg" alt="Acrylic Frame" loading="lazy"
+                                <img src="Images/category/Acrylic Frame.jpg" alt="Acrylic Frame" loading="lazy"
                                     decoding="async" width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Acrylic Frame
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Acrylic Frame</h6>
                         </a>
                     </div>
-
 
                     <!-- 2. Bouquet -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=bouquet"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Bouquet.jpg" alt="Bouquet" loading="lazy"
-                                    decoding="async" width="300" height="300">
+                                <img src="Images/category/Bouquet.jpg" alt="Bouquet" loading="lazy" decoding="async"
+                                    width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Bouquet
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Bouquet</h6>
                         </a>
                     </div>
-
 
                     <!-- 3. Canvas Frame -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=canvas-frame"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Canvas Frame.jpg" alt="Canvas Frame" loading="lazy"
+                                <img src="Images/category/Canvas Frame.jpg" alt="Canvas Frame" loading="lazy"
                                     decoding="async" width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Canvas Frame
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Canvas Frame</h6>
                         </a>
                     </div>
-
 
                     <!-- 4. Gift Hampers -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=gift-hampers"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Gift Hampers.jpg" alt="Gift Hampers" loading="lazy"
+                                <img src="Images/category/Gift Hampers.jpg" alt="Gift Hampers" loading="lazy"
                                     decoding="async" width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Gift Hampers
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Gift Hampers</h6>
                         </a>
                     </div>
-
 
                     <!-- 5. Magazine -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=magazine"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Magazine.jpg" alt="Magazine" loading="lazy"
-                                    decoding="async" width="300" height="300">
+                                <img src="Images/category/Magazine.jpg" alt="Magazine" loading="lazy" decoding="async"
+                                    width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Magazine
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Magazine</h6>
                         </a>
                     </div>
-
 
                     <!-- 6. Mug -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=mug"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Mug.jpg" alt="Mug" loading="lazy" decoding="async"
-                                    width="300" height="300">
+                                <img src="Images/category/Mug.jpg" alt="Mug" loading="lazy" decoding="async" width="300"
+                                    height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Mug
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Mug</h6>
                         </a>
                     </div>
-
 
                     <!-- 7. Photo Frame -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=photo-frame"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Photo Frame.jpg" alt="Photo Frame" loading="lazy"
+                                <img src="Images/category/Photo Frame.jpg" alt="Photo Frame" loading="lazy"
                                     decoding="async" width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Photo Frame
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Photo Frame</h6>
                         </a>
                     </div>
-
 
                     <!-- 8. Resin Art -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=resin-art"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Resin Art.jpg" alt="Resin Art" loading="lazy"
-                                    decoding="async" width="300" height="300">
+                                <img src="Images/category/Resin Art.jpg" alt="Resin Art" loading="lazy" decoding="async"
+                                    width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Resin Art
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Resin Art</h6>
                         </a>
                     </div>
-
 
                     <!-- 9. Return Gifts -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=return-gifts"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Return Gifts.jpg" alt="Return Gifts" loading="lazy"
+                                <img src="Images/category/Return Gifts.jpg" alt="Return Gifts" loading="lazy"
                                     decoding="async" width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Return Gifts
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Return Gifts</h6>
                         </a>
                     </div>
-
 
                     <!-- 10. Stationery -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=stationery"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Stationery.jpg" alt="Stationery" loading="lazy"
+                                <img src="Images/category/Stationery.jpg" alt="Stationery" loading="lazy"
                                     decoding="async" width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Stationery
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Stationery</h6>
                         </a>
                     </div>
-
 
                     <!-- 11. Trending Gifts -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=trending-gifts"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Trending Gifts.jpg" alt="Trending Gifts"
-                                    loading="lazy" decoding="async" width="300" height="300">
+                                <img src="Images/category/Trending Gifts.jpg" alt="Trending Gifts" loading="lazy"
+                                    decoding="async" width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Trending Gifts
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Trending Gifts</h6>
                         </a>
                     </div>
-
 
                     <!-- 12. Trending Customizations -->
                     <div class="col-6 col-md-4 col-lg-2 text-center">
                         <a href="pages/category-products.html?category=trending-customizations"
                             class="category-item text-decoration-none text-dark">
-
                             <div class="category-image">
-                                <img src="frontend/Images/category/Trending Customizations.jpg"
-                                    alt="Trending Customizations" loading="lazy" decoding="async" width="300"
-                                    height="300">
+                                <img src="Images/category/Trending Customizations.jpg" alt="Trending Customizations"
+                                    loading="lazy" decoding="async" width="300" height="300">
                             </div>
-
-                            <h6 class="fw-semibold mt-3">
-                                Trending Customizations
-                            </h6>
-
+                            <h6 class="fw-semibold mt-3">Trending Customizations</h6>
                         </a>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ============================
-             FEATURED PRODUCTS
-        ============================= -->
+        <!-- Featured Products -->
         <section class="py-5 bg-light product-section">
             <div class="container">
-
                 <h2 class="text-center fw-bold mb-2 section-title">Featured Products</h2>
                 <p class="text-center text-muted mb-4">Discover our most loved personalized gifts</p>
 
                 <div class="row g-3 g-md-4">
-
                     <!-- Product 1 -->
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="card product-card h-100 rounded-3 shadow-sm position-relative">
-                            <a href="#" class="product-image-link">
-                                <img src="frontend/Images/products/Memory Box.jpg" class="card-img-top product-image"
+                            <a href="pages/product-details.html?id=memory-box" class="product-image-link">
+                                <img src="Images/products/Memory Box.jpg" class="card-img-top product-image"
                                     alt="Memory Box" loading="lazy" decoding="async" width="600" height="450">
                             </a>
                             <span class="discount-badge">10% OFF</span>
-                            <button class="btn btn-light wishlist-btn" type="button"
-                                aria-label="Add Memory Box to wishlist">
+                            <!-- Added data-id and wishlist-btn-home class -->
+                            <button class="btn btn-light wishlist-btn wishlist-btn-home" type="button"
+                                data-id="memory-box" aria-label="Add Memory Box to wishlist">
                                 <i class="bi bi-heart"></i>
                             </button>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h6 mb-1">
-                                    <a href="#" class="stretched-link-title">Memory Box</a>
+                                    <a href="pages/product-details.html?id=memory-box"
+                                        class="stretched-link-title">Memory Box</a>
                                 </h3>
                                 <p class="card-text text-muted">A beautiful personalized memory box.</p>
                                 <div class="fw-bold product-price mb-2">₹1,499</div>
-                                <button class="btn btn-primary btn-sm w-100 mt-auto" type="button">Add to Cart</button>
+                                <!-- Added data-id and add-to-cart-home class -->
+                                <button class="btn btn-primary btn-sm w-100 mt-auto add-to-cart-home" type="button"
+                                    data-id="memory-box">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -562,23 +343,24 @@
                     <!-- Product 2 -->
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="card product-card h-100 rounded-3 shadow-sm position-relative">
-                            <a href="#" class="product-image-link">
-                                <img src="frontend/Images/products/Personalized Frame.jpg"
-                                    class="card-img-top product-image" alt="Personalized Frame" loading="lazy"
-                                    decoding="async" width="600" height="450">
+                            <a href="pages/product-details.html?id=personalized-frame" class="product-image-link">
+                                <img src="Images/products/Personalized Frame.jpg" class="card-img-top product-image"
+                                    alt="Personalized Frame" loading="lazy" decoding="async" width="600" height="450">
                             </a>
                             <span class="discount-badge">10% OFF</span>
-                            <button class="btn btn-light wishlist-btn" type="button"
-                                aria-label="Add Personalized Frame to wishlist">
+                            <button class="btn btn-light wishlist-btn wishlist-btn-home" type="button"
+                                data-id="personalized-frame" aria-label="Add Personalized Frame to wishlist">
                                 <i class="bi bi-heart"></i>
                             </button>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h6 mb-1">
-                                    <a href="#" class="stretched-link-title">Personalized Frame</a>
+                                    <a href="pages/product-details.html?id=personalized-frame"
+                                        class="stretched-link-title">Personalized Frame</a>
                                 </h3>
                                 <p class="card-text text-muted">A beautiful personalized frame for special memories.</p>
                                 <div class="fw-bold product-price mb-2">₹799</div>
-                                <button class="btn btn-primary btn-sm w-100 mt-auto" type="button">Add to Cart</button>
+                                <button class="btn btn-primary btn-sm w-100 mt-auto add-to-cart-home" type="button"
+                                    data-id="personalized-frame">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -586,22 +368,24 @@
                     <!-- Product 3 -->
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="card product-card h-100 rounded-3 shadow-sm position-relative">
-                            <a href="#" class="product-image-link">
-                                <img src="frontend/Images/products/Photo Album.jpg" class="card-img-top product-image"
+                            <a href="pages/product-details.html?id=photo-album" class="product-image-link">
+                                <img src="Images/products/Photo Album.jpg" class="card-img-top product-image"
                                     alt="Photo Album" loading="lazy" decoding="async" width="600" height="450">
                             </a>
                             <span class="discount-badge">10% OFF</span>
-                            <button class="btn btn-light wishlist-btn" type="button"
-                                aria-label="Add Photo Album to wishlist">
+                            <button class="btn btn-light wishlist-btn wishlist-btn-home" type="button"
+                                data-id="photo-album" aria-label="Add Photo Album to wishlist">
                                 <i class="bi bi-heart"></i>
                             </button>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h6 mb-1">
-                                    <a href="#" class="stretched-link-title">Photo Album</a>
+                                    <a href="pages/product-details.html?id=photo-album"
+                                        class="stretched-link-title">Photo Album</a>
                                 </h3>
                                 <p class="card-text text-muted">Keep your favorite memories together.</p>
                                 <div class="fw-bold product-price mb-2">₹999</div>
-                                <button class="btn btn-primary btn-sm w-100 mt-auto" type="button">Add to Cart</button>
+                                <button class="btn btn-primary btn-sm w-100 mt-auto add-to-cart-home" type="button"
+                                    data-id="photo-album">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -609,22 +393,24 @@
                     <!-- Product 4 -->
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="card product-card h-100 rounded-3 shadow-sm position-relative">
-                            <a href="#" class="product-image-link">
-                                <img src="frontend/Images/products/Photo Frame.jpg" class="card-img-top product-image"
+                            <a href="pages/product-details.html?id=photo-frame" class="product-image-link">
+                                <img src="Images/products/Photo Frame.jpg" class="card-img-top product-image"
                                     alt="Photo Frame" loading="lazy" decoding="async" width="600" height="450">
                             </a>
                             <span class="discount-badge">10% OFF</span>
-                            <button class="btn btn-light wishlist-btn" type="button"
-                                aria-label="Add Photo Frame to wishlist">
+                            <button class="btn btn-light wishlist-btn wishlist-btn-home" type="button"
+                                data-id="photo-frame" aria-label="Add Photo Frame to wishlist">
                                 <i class="bi bi-heart"></i>
                             </button>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h6 mb-1">
-                                    <a href="#" class="stretched-link-title">Photo Frame</a>
+                                    <a href="pages/product-details.html?id=photo-frame"
+                                        class="stretched-link-title">Photo Frame</a>
                                 </h3>
                                 <p class="card-text text-muted">Turn your favorite photo into a beautiful gift.</p>
                                 <div class="fw-bold product-price mb-2">₹699</div>
-                                <button class="btn btn-primary btn-sm w-100 mt-auto" type="button">Add to Cart</button>
+                                <button class="btn btn-primary btn-sm w-100 mt-auto add-to-cart-home" type="button"
+                                    data-id="photo-frame">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -632,23 +418,24 @@
                     <!-- Product 5 -->
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="card product-card h-100 rounded-3 shadow-sm position-relative">
-                            <a href="#" class="product-image-link">
-                                <img src="frontend/Images/products/Personalized Mug.jpg"
-                                    class="card-img-top product-image" alt="Personalized Mug" loading="lazy"
-                                    decoding="async" width="600" height="450">
+                            <a href="pages/product-details.html?id=personalized-mug" class="product-image-link">
+                                <img src="Images/products/Personalized Mug.jpg" class="card-img-top product-image"
+                                    alt="Personalized Mug" loading="lazy" decoding="async" width="600" height="450">
                             </a>
                             <span class="discount-badge">10% OFF</span>
-                            <button class="btn btn-light wishlist-btn" type="button"
-                                aria-label="Add Personalized Mug to wishlist">
+                            <button class="btn btn-light wishlist-btn wishlist-btn-home" type="button"
+                                data-id="personalized-mug" aria-label="Add Personalized Mug to wishlist">
                                 <i class="bi bi-heart"></i>
                             </button>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h6 mb-1">
-                                    <a href="#" class="stretched-link-title">Personalized Mug</a>
+                                    <a href="pages/product-details.html?id=personalized-mug"
+                                        class="stretched-link-title">Personalized Mug</a>
                                 </h3>
                                 <p class="card-text text-muted">Make every morning special with a personalized mug.</p>
                                 <div class="fw-bold product-price mb-2">₹499</div>
-                                <button class="btn btn-primary btn-sm w-100 mt-auto" type="button">Add to Cart</button>
+                                <button class="btn btn-primary btn-sm w-100 mt-auto add-to-cart-home" type="button"
+                                    data-id="personalized-mug">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -656,23 +443,25 @@
                     <!-- Product 6 -->
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="card product-card h-100 rounded-3 shadow-sm position-relative">
-                            <a href="#" class="product-image-link">
-                                <img src="frontend/Images/products/Gift Hamper.jpg" class="card-img-top product-image"
+                            <a href="pages/product-details.html?id=gift-hamper" class="product-image-link">
+                                <img src="Images/products/Gift Hamper.jpg" class="card-img-top product-image"
                                     alt="Gift Hamper" loading="lazy" decoding="async" width="600" height="450">
                             </a>
                             <span class="discount-badge">10% OFF</span>
-                            <button class="btn btn-light wishlist-btn" type="button"
-                                aria-label="Add Gift Hamper to wishlist">
+                            <button class="btn btn-light wishlist-btn wishlist-btn-home" type="button"
+                                data-id="gift-hamper" aria-label="Add Gift Hamper to wishlist">
                                 <i class="bi bi-heart"></i>
                             </button>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h6 mb-1">
-                                    <a href="#" class="stretched-link-title">Gift Hamper</a>
+                                    <a href="pages/product-details.html?id=gift-hamper"
+                                        class="stretched-link-title">Gift Hamper</a>
                                 </h3>
                                 <p class="card-text text-muted">A thoughtful collection of gifts for your loved ones.
                                 </p>
                                 <div class="fw-bold product-price mb-2">₹1,299</div>
-                                <button class="btn btn-primary btn-sm w-100 mt-auto" type="button">Add to Cart</button>
+                                <button class="btn btn-primary btn-sm w-100 mt-auto add-to-cart-home" type="button"
+                                    data-id="gift-hamper">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -680,23 +469,25 @@
                     <!-- Product 7 -->
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="card product-card h-100 rounded-3 shadow-sm position-relative">
-                            <a href="#" class="product-image-link">
-                                <img src="frontend/Images/products/Resin Art.jpg" class="card-img-top product-image"
+                            <a href="pages/product-details.html?id=resin-art" class="product-image-link">
+                                <img src="Images/products/Resin Art.jpg" class="card-img-top product-image"
                                     alt="Resin Art" loading="lazy" decoding="async" width="600" height="450">
                             </a>
                             <span class="discount-badge">10% OFF</span>
-                            <button class="btn btn-light wishlist-btn" type="button"
-                                aria-label="Add Resin Art to wishlist">
+                            <button class="btn btn-light wishlist-btn wishlist-btn-home" type="button"
+                                data-id="resin-art" aria-label="Add Resin Art to wishlist">
                                 <i class="bi bi-heart"></i>
                             </button>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h6 mb-1">
-                                    <a href="#" class="stretched-link-title">Resin Art</a>
+                                    <a href="pages/product-details.html?id=resin-art" class="stretched-link-title">Resin
+                                        Art</a>
                                 </h3>
                                 <p class="card-text text-muted">Beautiful handmade resin art for your special moments.
                                 </p>
                                 <div class="fw-bold product-price mb-2">₹1,199</div>
-                                <button class="btn btn-primary btn-sm w-100 mt-auto" type="button">Add to Cart</button>
+                                <button class="btn btn-primary btn-sm w-100 mt-auto add-to-cart-home" type="button"
+                                    data-id="resin-art">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -704,18 +495,19 @@
                     <!-- Product 8 -->
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="card product-card h-100 rounded-3 shadow-sm position-relative">
-                            <a href="#" class="product-image-link">
-                                <img src="frontend/Images/products/Canvas Frame.jpg" class="card-img-top product-image"
+                            <a href="pages/product-details.html?id=canvas-frame" class="product-image-link">
+                                <img src="Images/products/Canvas Frame.jpg" class="card-img-top product-image"
                                     alt="Canvas Frame" loading="lazy" decoding="async" width="600" height="450">
                             </a>
                             <span class="discount-badge">10% OFF</span>
-                            <button class="btn btn-light wishlist-btn" type="button"
-                                aria-label="Add Canvas Frame to wishlist">
+                            <button class="btn btn-light wishlist-btn wishlist-btn-home" type="button"
+                                data-id="canvas-frame" aria-label="Add Canvas Frame to wishlist">
                                 <i class="bi bi-heart"></i>
                             </button>
                             <div class="card-body d-flex flex-column">
                                 <h3 class="card-title h6 mb-1">
-                                    <a href="#" class="stretched-link-title">Canvas Frame</a>
+                                    <a href="pages/product-details.html?id=canvas-frame"
+                                        class="stretched-link-title">Canvas Frame</a>
                                 </h3>
                                 <p class="card-text text-muted">Turn your favorite memories into beautiful canvas art.
                                 </p>
@@ -723,32 +515,26 @@
                                     <span class="original-price">₹1,221</span>
                                     <span class="product-price">₹1,099</span>
                                 </div>
-                                <button class="btn btn-primary btn-sm w-100 mt-auto" type="button">Add to Cart</button>
+                                <button class="btn btn-primary btn-sm w-100 mt-auto add-to-cart-home" type="button"
+                                    data-id="canvas-frame">Add to Cart</button>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="text-center mt-4">
-                    <a href="#" class="btn btn-outline-primary px-4">View All Products</a>
+                    <a href="pages/categories.html" class="btn btn-outline-primary px-4">View All Products</a>
                 </div>
-
             </div>
         </section>
 
-
-        <!-- ============================
-             WHY CHOOSE US
-        ============================= -->
+        <!-- Why Choose Us -->
         <section class="py-5 why-choose-section">
             <div class="container">
-
                 <h2 class="text-center section-title fw-bold mb-2">Why Choose MemoryCraftsOnline?</h2>
                 <p class="text-center text-muted mb-4">We make your special moments even more memorable.</p>
 
                 <div class="row g-4">
-
                     <div class="col-6 col-lg-3">
                         <div class="text-center">
                             <div class="why-choose-icon"><i class="bi bi-palette"></i></div>
@@ -756,7 +542,6 @@
                             <p class="text-muted small mb-0">Create gifts made specially for you.</p>
                         </div>
                     </div>
-
                     <div class="col-6 col-lg-3">
                         <div class="text-center">
                             <div class="why-choose-icon"><i class="bi bi-heart-fill"></i></div>
@@ -764,7 +549,6 @@
                             <p class="text-muted small mb-0">Every gift is crafted with care.</p>
                         </div>
                     </div>
-
                     <div class="col-6 col-lg-3">
                         <div class="text-center">
                             <div class="why-choose-icon"><i class="bi bi-stars"></i></div>
@@ -772,7 +556,6 @@
                             <p class="text-muted small mb-0">Discover gifts for every special occasion.</p>
                         </div>
                     </div>
-
                     <div class="col-6 col-lg-3">
                         <div class="text-center">
                             <div class="why-choose-icon"><i class="bi bi-emoji-smile"></i></div>
@@ -780,19 +563,14 @@
                             <p class="text-muted small mb-0">Your happiness is our priority.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-
-        <!-- ============================
-             FOOTER BENEFITS
-        ============================= -->
+        <!-- Footer Benefits -->
         <section class="border-top border-bottom py-3 footer-benefits">
             <div class="container">
                 <div class="row justify-content-center g-3 g-md-4">
-
                     <div class="col-4">
                         <div class="d-flex align-items-center justify-content-center">
                             <i class="bi bi-send fs-1 text-secondary me-2 me-md-3"></i>
@@ -802,7 +580,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-4">
                         <div class="d-flex align-items-center justify-content-center">
                             <i class="bi bi-credit-card fs-1 text-secondary me-2 me-md-3"></i>
@@ -812,7 +589,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-4">
                         <div class="d-flex align-items-center justify-content-center">
                             <i class="bi bi-headset fs-1 text-secondary me-2 me-md-3"></i>
@@ -822,126 +598,114 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-
     </main>
 
-
-    <!-- ============================
-         MAIN FOOTER
-    ============================= -->
+    <!-- Main Footer -->
     <footer class="py-4">
         <div class="container">
             <div class="row g-4">
-
                 <!-- About Us -->
                 <div class="col-12 col-md-6 col-lg-3">
                     <h5 class="fw-semibold mb-3">About Us</h5>
                     <p class="text-muted small">Customise gifting in Solapur.</p>
-                    <a href="tel:+919405408709" class="d-block text-decoration-none text-muted small mb-2 footer-link">
-                        +91 94054 08709
-                    </a>
+                    <a href="tel:+919405408709"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">+91 94054 08709</a>
                     <a href="mailto:memorycrafts@memorycraftsonline.com"
-                        class="d-block text-decoration-none text-muted small mb-2 footer-link text-break">
-                        memorycrafts@memorycraftsonline.com
-                    </a>
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link text-break">memorycrafts@memorycraftsonline.com</a>
                     <p class="small mb-0">Solapur, Maharashtra 413006</p>
                 </div>
-
                 <!-- Departments -->
                 <div class="col-6 col-lg-3">
                     <h5 class="fw-semibold mb-3">Departments</h5>
-                    <a href="#" class="d-block text-decoration-none text-muted small mb-2 footer-link">Who Are We</a>
-                    <a href="#" class="d-block text-decoration-none text-muted small mb-2 footer-link">Our Mission</a>
-                    <a href="#" class="d-block text-decoration-none text-muted small mb-2 footer-link">Awards</a>
-                    <a href="#" class="d-block text-decoration-none text-muted small mb-2 footer-link">Experience</a>
-                    <a href="#" class="d-block text-decoration-none text-muted small footer-link">Success Story</a>
+                    <a href="pages/about.html"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Who Are We</a>
+                    <a href="pages/about.html#mission"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Our Mission</a>
+                    <a href="pages/about.html#awards"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Awards</a>
+                    <a href="pages/about.html#experience"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Experience</a>
+                    <a href="pages/about.html#story"
+                        class="d-block text-decoration-none text-muted small footer-link">Success Story</a>
                 </div>
-
                 <!-- Quick Links -->
                 <div class="col-6 col-lg-3">
                     <h5 class="fw-semibold mb-3">Quick Links</h5>
-                    <a href="#" class="d-block text-decoration-none text-muted small mb-2 footer-link">Contact Us</a>
-                    <a href="#" class="d-block text-decoration-none text-muted small mb-2 footer-link">Track Order</a>
-                    <a href="#" class="d-block text-decoration-none text-muted small mb-2 footer-link">Shipping &amp;
+                    <a href="pages/contact.html"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Contact Us</a>
+                    <a href="pages/orders.html"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Track Order</a>
+                    <a href="pages/shipping.html"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Shipping &amp;
                         Delivery</a>
-                    <a href="#" class="d-block text-decoration-none text-muted small mb-2 footer-link">Refund &amp;
-                        Return</a>
-                    <a href="#" class="d-block text-decoration-none text-muted small mb-2 footer-link">Privacy
-                        Policy</a>
-                    <a href="#" class="d-block text-decoration-none text-muted small footer-link">Terms &amp;
-                        Conditions</a>
+                    <a href="pages/refund.html"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Refund &amp; Return</a>
+                    <a href="pages/privacy.html"
+                        class="d-block text-decoration-none text-muted small mb-2 footer-link">Privacy Policy</a>
+                    <a href="pages/terms.html" class="d-block text-decoration-none text-muted small footer-link">Terms
+                        &amp; Conditions</a>
                 </div>
-
                 <!-- Newsletter -->
                 <div class="col-12 col-lg-3">
                     <h5 class="fw-semibold mb-3">Let's keep in touch</h5>
                     <p class="text-muted small">Get recommendations, tips, updates and more.</p>
-
                     <form class="input-group footer-newsletter mb-3" novalidate>
                         <input type="email" class="form-control rounded-start-pill" placeholder="info@mail.com"
                             aria-label="Email address">
                         <button type="submit" class="btn btn-primary rounded-end-pill px-3">Subscribe</button>
                     </form>
-
                     <div class="d-flex gap-3 fs-5 footer-social">
-                        <a href="#" class="text-muted" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-muted" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-muted" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/the_memory_crafts/" target="_blank" rel="noopener"
+                            class="text-muted" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/the_memory_crafts/" target="_blank" rel="noopener"
+                            class="text-muted" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/919405408709" target="_blank" rel="noopener" class="text-muted"
+                            aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>
 
-
     <!-- Copyright -->
     <div class="container py-3 border-top">
-        <p class="small text-muted text-center mb-0">
-            MemoryCrafts ©2026 — All rights reserved.
-        </p>
+        <p class="small text-muted text-center mb-0">MemoryCrafts ©2026 — All rights reserved.</p>
     </div>
 
-
-    <!-- ============================
-         MOBILE BOTTOM NAV
-    ============================= -->
+    <!-- Mobile Bottom Nav -->
     <nav class="d-lg-none fixed-bottom bottom-nav" aria-label="Mobile navigation">
         <div class="d-flex justify-content-around py-1">
-            <a href="#" class="nav-link text-center active">
+            <a href="index.html" class="nav-link text-center active">
                 <i class="bi bi-house"></i>
                 <small class="d-block bottom-nav-text">Home</small>
             </a>
-            <a href="#" class="nav-link text-center">
+            <a href="pages/categories.html" class="nav-link text-center">
                 <i class="bi bi-shop"></i>
                 <small class="d-block bottom-nav-text">Shop</small>
             </a>
-            <a href="#" class="nav-link text-center">
+            <a href="pages/account.html" class="nav-link text-center">
                 <i class="bi bi-person"></i>
                 <small class="d-block bottom-nav-text">Account</small>
             </a>
-            <a href="#" class="nav-link text-center">
+            <a href="pages/cart.html" class="nav-link text-center">
                 <i class="bi bi-cart"></i>
                 <small class="d-block bottom-nav-text">Cart</small>
             </a>
-            <a href="#" class="nav-link text-center">
+            <a href="pages/orders.html" class="nav-link text-center">
                 <i class="bi bi-box-seam"></i>
                 <small class="d-block bottom-nav-text">Orders</small>
             </a>
         </div>
     </nav>
 
-
-    <!-- Bootstrap JavaScript -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom JavaScript -->
-    <script src="frontend/js/script.js"></script>
-
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
